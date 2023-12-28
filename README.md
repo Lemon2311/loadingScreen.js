@@ -1,4 +1,6 @@
-Easy to implement loading screen for websites. Right now copy paste-ing the code into your main js file, will add a loading screen to your
-website whatever the content of your html file might be, that will cover the hole screen, showing a loading sign, till js is loaded.
-LoadingScreen also has hide(); and show(); functions, and will eventually be implemented so that when using const loadingScreen = new LoadingScreen(),
-the loading screen can be used by calling functions onto it without adding any html in plus. example: loadingScreen.hideOnJsLoad(); 
+Easy to implement loading screen for websites.<br>
+Just add the loadingScreen.js file in your project and<br>
+
+![loadingscreenexample](https://github.com/Lemon2311/loadingScreen.js/assets/63803133/f381a225-a83f-4e85-8a15-ffddcc4bcc7d)
+<br>
+and the loading screen will appear when your website is opened, and will dissapear when js is loaded.
