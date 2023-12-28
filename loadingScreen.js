@@ -1,5 +1,6 @@
 export class LoadingScreen {
     constructor() {
+        // Create the loading screen div
         this.loadingScreen = document.createElement("div");
         this.loadingScreen.style.position = "fixed";
         this.loadingScreen.style.top = "0";
@@ -12,6 +13,7 @@ export class LoadingScreen {
         this.loadingScreen.style.alignItems = "center";
         this.loadingScreen.style.zIndex = "9999";
 
+        // Create the spinner div
         this.spinner = document.createElement("div");
         this.spinner.style.border = "4px solid rgba(0, 0, 0, 0.3)";
         this.spinner.style.borderTop = "4px solid #3498db";
@@ -20,9 +22,10 @@ export class LoadingScreen {
         this.spinner.style.height = "40px";
         this.spinner.style.animation = "spin 1s linear infinite";
 
+        // Append spinner to the loading screen
         this.loadingScreen.appendChild(this.spinner);
 
-        // Define the CSS animation
+        // Define the CSS animation for the spinner
         const style = document.createElement("style");
         style.innerHTML = `
         @keyframes spin {
@@ -31,11 +34,7 @@ export class LoadingScreen {
         }`;
         document.head.appendChild(style);
 
-        // Show the loading screen initially
-        this.show();
-    }
-
-    show() {
+        // Show the loading screen
         document.documentElement.appendChild(this.loadingScreen);
     }
 
@@ -49,16 +48,9 @@ export class LoadingScreen {
         }, delay);
     }
 
-    // Method to hide the loading screen after JavaScript has loaded
     hideOnJsLoad() {
         window.onload = () => {
             this.hide();
         };
     }
 }
-
-(function () {
-    const loading = new LoadingScreen();
-    loading.hideOnJsLoad();// To hide the loading screen after JavaScript has loaded
-    
-})();
