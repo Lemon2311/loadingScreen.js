@@ -1,15 +1,5 @@
 import { LoadingScreen } from './loadingScreen.js';
 
 const loadingScreen = new LoadingScreen();
-
-loadingScreen.hideOnJsLoad();
-
-performHeavyComputation();
-
-function performHeavyComputation() {
-    let result = 0;
-    for (let i = 0; i < 100000000; i++) {
-        result += Math.sin(i) * Math.cos(i);
-    }
-    return result;
-}
+//loadingScreen.hideOnJsLoad(); should be used to hide the loadingScreen when js is fully loaded
+loadingScreen.simulateLoading(5000);//is used here to simulate js loading
