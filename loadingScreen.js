@@ -42,6 +42,10 @@ export class LoadingScreen {
         this.loadingScreen.style.display = "none";
     }
 
+    show(){
+        this.loadingScreen.style.display = "flex";
+    }
+
     simulateLoading(delay) {
         setTimeout(() => {
             this.hide();
